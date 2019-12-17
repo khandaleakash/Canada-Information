@@ -6,5 +6,5 @@ package com.canadainformation.utils;
  */
 public class Constants {
     public final static String QUAKES_API_BASE_URL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/";
-    public final static String QUAKES_ROOM_DB_STRING = "Information.db";
+    public final static String QUAKES_ROOM_DB_STRING = "information.db";
 }

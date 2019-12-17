@@ -60,6 +60,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:$rootProject.supportLibraryVersion"
     implementation "androidx.legacy:legacy-support-v4:$rootProject.supportLibraryVersion"
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayout"
+    implementation "com.google.guava:guava:$rootProject.guavaVersion"
 
 
     implementation "androidx.room:room-rxjava2:$rootProject.roomVersion"
