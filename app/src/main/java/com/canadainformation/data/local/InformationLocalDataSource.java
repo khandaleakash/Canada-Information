@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 import com.canadainformation.data.MainAppDataSource;
 import com.canadainformation.model.Information;
-import com.canadainformation.provider.BaseSchedulerProvider;
+import com.canadainformation.schedulers.BaseSchedulerProvider;
 
 import java.util.List;
 

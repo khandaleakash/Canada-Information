@@ -1,4 +1,4 @@
-package com.canadainformation.provider;
+package com.canadainformation.schedulers;
 
 /**
  * Created By Akash

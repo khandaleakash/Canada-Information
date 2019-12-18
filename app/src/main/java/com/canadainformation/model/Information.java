@@ -3,6 +3,7 @@ package com.canadainformation.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -21,6 +22,7 @@ public final class Information {
     @Ignore
     private static final long STALE_MS = 5 * 60 * 1000; // Data is stale after 5 minutes
 
+    @PrimaryKey
     @ColumnInfo(name = "title")
     @SerializedName("title")
     @Expose

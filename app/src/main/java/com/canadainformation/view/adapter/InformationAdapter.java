@@ -84,4 +84,9 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
     }
 
 
+    public void setInfoItemList(List<InfoItem> itemList){
+        this.infoItemList=infoItemList;
+        notifyDataSetChanged();
+    }
+
 }

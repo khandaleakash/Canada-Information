@@ -9,7 +9,7 @@ import com.canadainformation.data.remote.InformationRemoteDataSource;
 import com.canadainformation.data.scopes.Local;
 import com.canadainformation.data.scopes.Remote;
 import com.canadainformation.di.scopes.AppScoped;
-import com.canadainformation.provider.BaseSchedulerProvider;
+import com.canadainformation.schedulers.BaseSchedulerProvider;
 
 import dagger.Module;
 import dagger.Provides;

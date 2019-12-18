@@ -13,7 +13,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
  */
 public class ActivityUtils {
 
-    static void addFragmentToActivity(FragmentManager fragmentManager, Fragment fragment, int frameId) {
+    public static void addFragmentToActivity(FragmentManager fragmentManager, Fragment fragment, int frameId) {
         checkNotNull(fragmentManager);
         checkNotNull(fragment);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
