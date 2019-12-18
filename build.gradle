@@ -46,6 +46,8 @@ ext {
     rxandroidVersion = '2.0.2'
     rx1androidVersion = '1.2.1'
     sqlbriteVersion = '2.0.0'
+    okHttpLoggingInterceptorVersion='4.2.1'
+    picassoVersion='2.71828'
 }
 
 allprojects {

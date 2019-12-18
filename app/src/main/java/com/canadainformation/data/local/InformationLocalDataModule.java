@@ -20,7 +20,7 @@ public class InformationLocalDataModule {
     @Provides
     AppDatabase provideDb(Application context) {
         return Room.databaseBuilder(context.getApplicationContext(),
-                AppDatabase.class, Constants.QUAKES_ROOM_DB_STRING)
+                AppDatabase.class, Constants.INFORMATION_DB)
                 .build();
     }
 

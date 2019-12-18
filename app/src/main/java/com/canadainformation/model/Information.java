@@ -69,6 +69,14 @@ public final class Information {
         this.imageHref = imageHref;
     }
 
+    public Long getTimeStampAdded() {
+        return timeStampAdded;
+    }
+
+    public void setTimeStampAdded(Long timeStampAdded) {
+        this.timeStampAdded = timeStampAdded;
+    }
+
     public boolean isUpdated() {
         return System.currentTimeMillis() - timeStampAdded < STALE_MS;
     }
