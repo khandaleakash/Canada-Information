@@ -66,7 +66,7 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
 
     @Override
     public int getItemCount() {
-        return 0;
+        return infoItemList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{
@@ -85,7 +85,7 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
 
 
     public void setInfoItemList(List<InfoItem> itemList){
-        this.infoItemList=infoItemList;
+        this.infoItemList=itemList;
         notifyDataSetChanged();
     }
 

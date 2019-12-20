@@ -1,5 +1,7 @@
 package com.canadainformation;
 
+import com.canadainformation.di.component.DaggerAppComponent;
+
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication;
 

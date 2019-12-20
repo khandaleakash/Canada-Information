@@ -87,10 +87,24 @@ public class InformationFragment extends Fragment implements BaseView {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
 
+        recyclerView.setAdapter(mInformationAdapter);
+
         setupNoInformationView(root);
         setupSwipeRefreshLayout(root);
 
         return root;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        bindViewModel();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        unbindViewModel();
     }
 
     private void setupNoInformationView(View view) {
@@ -123,7 +137,7 @@ public class InformationFragment extends Fragment implements BaseView {
 
     private void updateView(InformationUiModel model){
         int ratesListVisibility = model.ismIsNoInfoAvailable() ? View.VISIBLE : View.GONE;
-        int noInformaionViewVisibility = model.ismIsNoInfoAvailable() ? View.VISIBLE : View.GONE;
+        int noInformaionViewVisibility = model.ismIsNoInfoViewVisible() ? View.VISIBLE : View.GONE;
         mNoInformationView.setVisibility(noInformaionViewVisibility);
 
         if (model.ismIsNoInfoAvailable()) {

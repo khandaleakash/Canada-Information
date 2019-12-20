@@ -1,5 +1,6 @@
 package com.canadainformation.model;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -21,8 +22,10 @@ public final class Information {
 
     @Ignore
     private static final long STALE_MS = 5 * 60 * 1000; // Data is stale after 5 minutes
-
+    @NonNull
     @PrimaryKey
+    private int id;
+
     @ColumnInfo(name = "title")
     @SerializedName("title")
     @Expose
@@ -45,6 +48,14 @@ public final class Information {
 
     public Information() {
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {

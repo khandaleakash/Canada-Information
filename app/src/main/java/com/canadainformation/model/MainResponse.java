@@ -1,5 +1,6 @@
 package com.canadainformation.model;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -17,6 +18,7 @@ import java.util.List;
 @Entity(tableName = "title")
 public class MainResponse {
 
+    @NonNull
     @PrimaryKey
     @ColumnInfo(name = "title")
     @SerializedName("title")

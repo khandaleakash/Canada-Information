@@ -36,6 +36,7 @@ public class InformationRemoteDataSource implements MainAppDataSource {
                 .flatMap(response -> Observable.fromIterable(response.getInformationList()).toList())
                 .flatMap(responseList -> Observable.fromIterable(responseList)
                         .map(information -> {
+                            information.setId(responseList.indexOf(information));
                             information.setTimeStampAdded(System.currentTimeMillis());
                             return information;
                         }).toList());
