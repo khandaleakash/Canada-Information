@@ -23,6 +23,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.canadainformation.R;
 import com.canadainformation.base.BaseView;
 import com.canadainformation.di.scopes.ActivityScoped;
+import com.canadainformation.utils.ItemDecoration;
 import com.canadainformation.view.adapter.InformationAdapter;
 import com.canadainformation.view.information.InfoItem;
 import com.canadainformation.view.information.InformationUiModel;
@@ -85,8 +86,8 @@ public class InformationFragment extends Fragment implements BaseView {
         // Set up Information view
         RecyclerView recyclerView = root.findViewById(R.id.rv_info_list);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
-
+        ItemDecoration itemDecoration=new ItemDecoration(getResources().getDimensionPixelSize(R.dimen.item_margin),1);
+        recyclerView.addItemDecoration(itemDecoration);
         recyclerView.setAdapter(mInformationAdapter);
 
         setupNoInformationView(root);

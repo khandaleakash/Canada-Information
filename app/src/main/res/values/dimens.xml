@@ -12,4 +12,6 @@
     <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_extra_small">4dp</dimen>
 
+    <dimen name="item_margin">8dp</dimen>
+
 </resources>

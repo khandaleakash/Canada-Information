@@ -2,6 +2,8 @@ package com.canadainformation.view.activity;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
+
 import com.canadainformation.R;
 import com.canadainformation.utils.ActivityUtils;
 import com.canadainformation.view.fragment.InformationFragment;
@@ -23,6 +25,9 @@ public class MainActivity extends DaggerAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         // Set up fragment
         InformationFragment fragment = (InformationFragment) getSupportFragmentManager().findFragmentById(R.id.container);

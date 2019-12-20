@@ -7,8 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/card_side_margin"
-    android:layout_marginEnd="@dimen/card_side_margin"
-    android:layout_marginBottom="@dimen/card_bottom_margin">
+    android:layout_marginEnd="@dimen/card_side_margin">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,6 +29,7 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/title_color"
             tools:text="@string/dummy_title" />
 
 
