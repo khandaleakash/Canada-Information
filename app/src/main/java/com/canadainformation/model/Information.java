@@ -59,6 +59,16 @@ public final class Information {
 
     }
 
+    @Ignore
+    public Information(int mId,String mTitle,String mDescription,String mImageHref,long mtimeStampAdded) {
+        this.id=mId;
+        this.title=mTitle;
+        this.description=mDescription;
+        this.imageHref=mImageHref;
+        this.timeStampAdded=mtimeStampAdded;
+
+    }
+
     public int getId() {
         return id;
     }
