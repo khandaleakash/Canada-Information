@@ -29,7 +29,7 @@ public class InformationLocalDataSource implements MainAppDataSource {
     public InformationLocalDataSource(@NonNull InformationDao informationDao,
                                  @NonNull BaseSchedulerProvider schedulerProvider) {
         checkNotNull(schedulerProvider, "scheduleProvider cannot be null");
-        checkNotNull(informationDao, "quakesDao cannot be null");
+        checkNotNull(informationDao, "informationDao cannot be null");
 
         mInformationDao = informationDao;
         mSchedulerProvider = schedulerProvider;
@@ -72,5 +72,11 @@ public class InformationLocalDataSource implements MainAppDataSource {
         Completable.fromRunnable(()->mInformationDao.deleteInformationByTitle(informationTitle))
                 .subscribeOn(mSchedulerProvider.io()).subscribe();
 
+    }
+
+    @NonNull
+    @Override
+    public Single<String> getInformationTitle() {
+        return null;
     }
 }

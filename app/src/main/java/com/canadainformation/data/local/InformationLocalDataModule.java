@@ -26,7 +26,7 @@ public class InformationLocalDataModule {
 
     @AppScoped
     @Provides
-    InformationDao provideQuakesDao(AppDatabase db) {
+    InformationDao provideInformationDao(AppDatabase db) {
         return db.informationDao();
     }
 }

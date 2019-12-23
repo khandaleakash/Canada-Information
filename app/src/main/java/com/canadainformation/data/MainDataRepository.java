@@ -118,4 +118,14 @@ public class MainDataRepository implements MainAppDataSource {
         return mInformationRemoteDataSource.getInformation().
                 doOnSuccess(this::saveInformation);
     }
+
+    /**
+     * Method for getting title from response
+     * @return Title of the informatino
+     */
+    @NonNull
+    @Override
+    public Single<String> getInformationTitle() {
+        return null;
+    }
 }

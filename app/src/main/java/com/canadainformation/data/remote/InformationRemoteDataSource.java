@@ -74,4 +74,10 @@ public class InformationRemoteDataSource implements MainAppDataSource {
     public void deleteInformation(@NonNull String informationTitle) {
 
     }
+
+    @NonNull
+    @Override
+    public Single<String> getInformationTitle() {
+        return null;
+    }
 }

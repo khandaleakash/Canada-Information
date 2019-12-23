@@ -6,5 +6,5 @@
     <string name="no_data_found">No Data Found.</string>
     <string name="loading_information_error">Error while loading Information</string>
     <string name="no_info">The Information is lost! Our best detectives are working on it..</string>
-    <string name="quake_item_risk">Risk: </string>
+    <string name="image_desc">Image Description</string>
 </resources>

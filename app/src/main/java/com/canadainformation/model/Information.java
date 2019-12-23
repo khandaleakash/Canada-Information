@@ -15,7 +15,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 /**
- * Immutable model class for a Quake.
+ * Immutable model class for a Information.
  */
 @Entity(tableName = "information")
 public final class Information {
@@ -47,6 +47,15 @@ public final class Information {
 
 
     public Information() {
+
+    }
+
+    @Ignore
+    public Information(int mId,String mTitle,String mDescription,String mImageHref) {
+        this.id=mId;
+        this.title=mTitle;
+        this.description=mDescription;
+        this.imageHref=mImageHref;
 
     }
 

@@ -3,7 +3,6 @@ package com.canadainformation.data;
 import androidx.annotation.NonNull;
 
 import com.canadainformation.model.Information;
-import com.canadainformation.model.MainResponse;
 
 import java.util.List;
 
@@ -19,6 +18,9 @@ public interface MainAppDataSource {
 
     @NonNull
     Single<Information> getInformation(@NonNull String informationTitle);
+
+    @NonNull
+    Single<String> getInformationTitle();
 
     void saveInformation(@NonNull List<Information> information);
 

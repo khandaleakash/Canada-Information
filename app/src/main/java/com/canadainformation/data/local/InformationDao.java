@@ -33,6 +33,15 @@ public interface InformationDao {
     Single<Information> getInformationByTitle(String title);
 
 
+    /**
+     * Retrieve a Information by Id.
+     *
+     * @param id the Information title.
+     * @return the information with title
+     */
+    @Query("SELECT * FROM information WHERE id = :id")
+    Single<Information> getInformationById(int id);
+
 
     /**
      * Insert Information in the database. If the Information already exists, ignore the action.

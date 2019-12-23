@@ -52,7 +52,7 @@ public class InformationViewModel extends ViewModel {
 
 
     /**
-     * @return the model for the quakes screen
+     * @return the model for the Information screen
      */
     @NonNull
     public Single<InformationUiModel> getUiModel(boolean isForcedCall) {
@@ -74,19 +74,20 @@ public class InformationViewModel extends ViewModel {
 
         return mainDataRepository.getInformation()
                 .flatMap(list -> Observable.fromIterable(list)
+                        .filter(information -> (information.getTitle() != null && information.getDescription() != null && information.getImageHref() != null))
                         .map(this::constructInfoItem).toList());
     }
 
     @NonNull
-    private InformationUiModel constructInfoModel(List<InfoItem> quakes) {
-        boolean mIsNoInfoAvailable = !quakes.isEmpty();
+    private InformationUiModel constructInfoModel(List<InfoItem> infoItemList) {
+        boolean mIsNoInfoAvailable = !infoItemList.isEmpty();
         boolean mIsNoInfoViewVisible = !mIsNoInfoAvailable;
         NoInfoModel noInfoModel = null;
-        if (quakes.isEmpty()) {
+        if (infoItemList.isEmpty()) {
             noInfoModel = getNoInfoModel();
         }
 
-        return new InformationUiModel(mIsNoInfoAvailable, quakes, mIsNoInfoViewVisible,
+        return new InformationUiModel(mIsNoInfoAvailable, infoItemList, mIsNoInfoViewVisible,
                 noInfoModel);
     }
 

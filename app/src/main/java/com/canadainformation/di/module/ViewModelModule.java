@@ -20,7 +20,7 @@ public abstract class ViewModelModule {
     @Binds
     @IntoMap
     @ViewModelKey(InformationViewModel.class)
-    abstract ViewModel bindQuakesViewModel(InformationViewModel informationViewModel);
+    abstract ViewModel bindInformationViewModel(InformationViewModel informationViewModel);
 
     @Binds
     @AppScoped

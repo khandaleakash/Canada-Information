@@ -24,15 +24,15 @@ public class MainRepositoryModule {
     @Provides
     @Local
     @AppScoped
-    MainAppDataSource provideQuakesLocalDataSource(InformationDao quakesDao,
-                                                   BaseSchedulerProvider schedulerProvider) {
-        return new InformationLocalDataSource(quakesDao, schedulerProvider);
+    MainAppDataSource provideInformationLocalDataSource(InformationDao informationDao,
+                                                        BaseSchedulerProvider schedulerProvider) {
+        return new InformationLocalDataSource(informationDao, schedulerProvider);
     }
 
     @Provides
     @Remote
     @AppScoped
-    MainAppDataSource provideQuakesRemoteDataSource(InformationDataService apiService) {
+    MainAppDataSource provideInformationRemoteDataSource(InformationDataService apiService) {
         return new InformationRemoteDataSource(apiService);
     }
 

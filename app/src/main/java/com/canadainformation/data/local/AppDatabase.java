@@ -12,7 +12,7 @@ import com.canadainformation.model.Information;
 import com.canadainformation.model.MainResponse;
 
 /**
- * The Room Database that contains the Quakes table.
+ * The Room Database that contains the Information table.
  */
 
 @Database(entities = {Information.class, MainResponse.class}, version = 1, exportSchema = false)

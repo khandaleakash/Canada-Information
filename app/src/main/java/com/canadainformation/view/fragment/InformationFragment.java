@@ -54,6 +54,8 @@ public class InformationFragment extends Fragment implements BaseView {
 
     private InformationAdapter mInformationAdapter;
 
+    private RecyclerView mRecyclerView;
+
     private LinearLayout mNoInformationView;
 
     private TextView mNoInformationMainView;
@@ -84,11 +86,11 @@ public class InformationFragment extends Fragment implements BaseView {
         mInformationAdapter = new InformationAdapter(new ArrayList<>());
 
         // Set up Information view
-        RecyclerView recyclerView = root.findViewById(R.id.rv_info_list);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView = root.findViewById(R.id.rv_info_list);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         ItemDecoration itemDecoration=new ItemDecoration(getResources().getDimensionPixelSize(R.dimen.item_margin),1);
-        recyclerView.addItemDecoration(itemDecoration);
-        recyclerView.setAdapter(mInformationAdapter);
+        mRecyclerView.addItemDecoration(itemDecoration);
+        mRecyclerView.setAdapter(mInformationAdapter);
 
         setupNoInformationView(root);
         setupSwipeRefreshLayout(root);
@@ -138,8 +140,11 @@ public class InformationFragment extends Fragment implements BaseView {
 
     private void updateView(InformationUiModel model){
         int ratesListVisibility = model.ismIsNoInfoAvailable() ? View.VISIBLE : View.GONE;
-        int noInformaionViewVisibility = model.ismIsNoInfoViewVisible() ? View.VISIBLE : View.GONE;
-        mNoInformationView.setVisibility(noInformaionViewVisibility);
+        int noInformationViewVisibility = model.ismIsNoInfoViewVisible() ? View.VISIBLE : View.GONE;
+
+        mRecyclerView.setVisibility(ratesListVisibility);
+        mNoInformationView.setVisibility(noInformationViewVisibility);
+
 
         if (model.ismIsNoInfoAvailable()) {
             showInformation(model.getmItemList());
