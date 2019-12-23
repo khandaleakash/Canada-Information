@@ -102,7 +102,7 @@ public class InformationDaoTest {
         // insert  initial Information
         mDatabase.informationDao().insertInformation(INFORMATION_LIST.get(0));
 
-        // insert  Information quake
+        // insert  Information
         mDatabase.informationDao().insertInformation(conflictualInformation);
 
 
@@ -116,7 +116,7 @@ public class InformationDaoTest {
 
     /**
      * Test scenario states:
-     * Upon insertion of 1 quake  and deletion of all records, we should retrieve an empty list
+     * Upon insertion of 1 Information  and deletion of all records, we should retrieve an empty list
      * fom the database
      */
     @Test
